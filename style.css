@@ -1,0 +1,128 @@
+/* IMPORT GOOGLE FONT -- LEXEND DECA */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap');
+
+:root {
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+
+    --transparentWhite:  hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+
+    --box-shadow: 15px 15px 10px 15px rgba(0,0,0,.5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    background-color: var(--veryLightGray);
+    /* width: 90%;
+    max-width: 1440px; */
+    min-height: 100vh;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+}
+
+.card--container {
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    min-height: 450px;
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.text--content {
+    margin: 0 auto;
+    text-align: left;
+}
+.card:nth-child(1) {
+  background-color: var(--brightOrange);
+  border-radius: 10px 0 0 10px;
+}
+.card:nth-child(1) .link--btn {
+    color: var(--brightOrange);
+}
+
+.card:nth-child(2) .link--btn {
+    color: var(--darkCyan);
+}
+
+.card:nth-child(3) .link--btn {
+    color: var(--veryDarkCyan);
+}
+.card:nth-child(2) {
+    background-color: var(--darkCyan);
+}
+.card:nth-child(3) {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.image {
+    margin: 1rem 0;
+}
+.headings {
+    color: var(--transparentWhite);
+    margin-bottom: 1rem;
+}
+.text {
+    color: var(--transparentWhite);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+}
+.links {
+    margin-bottom: 2rem;
+    background-color: var(--transparentWhite);
+    border-radius: 30px;
+}
+.link--btn {
+    display: block;
+    border-radius: 20px;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .card--container {
+        margin-block: 2rem;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .card:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    } 
+}
+
